@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ethers } from 'ethers';
+
 export default function Navbar() {
   return (
     <div>
@@ -16,22 +16,22 @@ export default function Navbar() {
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li className="nav-item dropdown">
+          <a className ="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Register
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/RegisPat">As Patient</a></li>
-            <li><a class="dropdown-item" href="/RegisDoc">As Doctor</a></li>
+          <ul className="dropdown-menu">
+            <li><a className="dropdown-item" href="/RegisPat">As Patient</a></li>
+            <li><a className="dropdown-item" href="/RegisDoc">As Doctor</a></li>
           </ul>
         </li>
              
-        <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/upload">Upload</Link></li>
         
 
         
       </ul>
-      <button className='btn btn-outline-light'
+      <button className='btn btn-light'
       onClick={async ()=>
       {
         if (window.ethereum)

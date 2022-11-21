@@ -7,11 +7,11 @@ testCase("Deployment",function(){
     let owner;
     let pat1;
     let doc1;
-    let docs;
+    
 
     beforeEach(async function(){
         Token = await ethers.getContractFactory("Token");
-        [owner,pat1,doc1,...docs] = await ethers.getSigners();
+        [owner,pat1,doc1] = await ethers.getSigners();
         hardhatToken = await Token.deploy();
     });
     testCase("Token Contract",function(){
@@ -41,7 +41,8 @@ testCase("Deployment",function(){
             await hardhatToken.connect(doc1).addDoctor(doc1.address,"Dr.Sandeep","12345678","Heart","12334455667788991123");
             const result = await hardhatToken.connect(doc1).getDoctorInfo();
             console.log(result);
-            expect(await doc1.address).to.equal(result[5]);
+            console.log("result Doc address : ",result[4]);
+            expect(await doc1.address).to.equal(result[4]);
         });
     });
     

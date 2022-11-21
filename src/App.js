@@ -1,7 +1,7 @@
 import Dashboard from "./components/Dashboard";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import About from "./components/About";
-import Medbox from "./components/Medbox";
+// import Medbox from "./components/Medbox";
 import RegisDoc from "./components/RegisDoc";
 import Navbar from "./components/Navbar";
 import RegisPat from './components/RegisPat'

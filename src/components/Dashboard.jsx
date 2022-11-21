@@ -2,16 +2,15 @@ import React from 'react'
 import './Dashboard.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import tiny from '../photos/tiny.png'
-import medicine from '../photos/medicine.gif'
+import tiny from '../photos/enc.svg'
+
 import { faFileMedical } from '@fortawesome/free-solid-svg-icons';
 import { faTruckMedical } from '@fortawesome/free-solid-svg-icons';
-import { faFontAwesome } from '@fortawesome/free-regular-svg-icons';
+
 import { faSuitcaseMedical } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
-// import Navbar from './Navbar';
+
 const Dashboard = () => {
-  let navigate = useNavigate();
+  
   return (
     <>
 
@@ -24,12 +23,12 @@ const Dashboard = () => {
           <div className="d-left-head1">
             We help patients to own and secure their health records.Our team helps to take Doctor's appointment in an easy way.
           </div>
-          <div className="btn btn-primary btn-lg">
+          <div className="btn btn-info">
             Get Started
           </div>
         </div>
         <div className="d-right">
-          <img src={tiny} />
+          <img src = {tiny} alt="error"/>
         </div>
       </div>
       <div className="d-services">
